@@ -8,6 +8,6 @@ python-multipart
 aiofiles
 aiohttp
 pandas 
-matplotlib.pyplot 
+matplotlib
 keras
 cv2
