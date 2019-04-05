@@ -122,11 +122,10 @@ async def setup_learner():
             mean_area = area / (h * w)
             r, b, g = np.sum([gcolor[i, j] for j in range(w) for i in range(h)], axis=0) / (area * 256)
             _, _, eigen_value = pca(ggray)
-           eccentricity = eigen_value[0] / eigen_value[1]
-           l = [mean_area, r, b, g, eigen_value[0], eigen_value[1], eccentricity]
-           features[i] = np.array(l)
-           i=i+1
-       
+            eccentricity = eigen_value[0] / eigen_value[1]
+            l = [mean_area, r, b, g, eigen_value[0], eigen_value[1], eccentricity]
+            features[i] = np.array(l)
+            i=i+1
         out={}
         #learn = load_learner(path, export_file_name)
         #Change Working directory of pkl file
