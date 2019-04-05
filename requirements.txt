@@ -16,3 +16,4 @@ imageio
 scikit-image
 tensorflow
 theano
+libgtk2.0-dev
