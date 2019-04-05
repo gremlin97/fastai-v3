@@ -101,10 +101,10 @@ async def setup_learner():
         labels, nlabels = ndimage.label(mask)
         all_cords={}
         for label_ind, label_coords in enumerate(ndimage.find_objects(labels)):
-        cell = im_gray[label_coords]
-        all_cords[label_ind]=label_coords
-        if np.product(cell.shape) < 10: 
-            mask = np.where(labels==label_ind+1, 0, mask)
+            cell = im_gray[label_coords]
+            all_cords[label_ind]=label_coords
+            if np.product(cell.shape) < 10: 
+                mask = np.where(labels==label_ind+1, 0, mask)
         labels, nlabels = ndimage.label(mask)
         i=0
         res={}
