@@ -4,9 +4,19 @@ from starlette.staticfiles import StaticFiles
 from starlette.middleware.cors import CORSMiddleware
 import uvicorn, aiohttp, asyncio
 from io import BytesIO
-import numpy as np
 from fastai import *
 from fastai.vision import *
+import numpy as np 
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np, keras, cv2
+import os
+import cv2
+import pathlib
+import imageio
+import cv2
+import skimage
+import numpy as np
 
 # export_file_url = 'https://www.dropbox.com/s/v6cuuvddq73d1e0/export.pkl?raw=1'
 #'https://drive.google.com/uc?export=download&id=19P3D8dtv6GnlIbgDOwaFQplgzy2fC79_'
