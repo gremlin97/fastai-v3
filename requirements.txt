@@ -11,3 +11,7 @@ pandas
 matplotlib
 keras
 opencv-contrib-python
+os	
+pathlib	
+imageio	
+skimage
