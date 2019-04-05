@@ -28,7 +28,7 @@ async def download_file(url, dest):
             with open(dest, 'wb') as f: f.write(data)
          
 def pca(data):
-    dvect = []
+        dvect = []
         for i in range(data.shape[0]):
             for j in range(data.shape[1]):
                 if data[i, j]: dvect.append([i, j])
