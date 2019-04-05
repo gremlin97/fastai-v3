@@ -13,4 +13,4 @@ keras
 opencv-contrib-python
 pathlib	
 imageio	
-skimage
+scikit-image
