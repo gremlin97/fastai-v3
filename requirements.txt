@@ -10,5 +10,4 @@ aiohttp
 pandas 
 matplotlib
 keras
-opencv-python
-cv2
+opencv==3.1
