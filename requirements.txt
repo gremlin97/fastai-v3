@@ -11,7 +11,3 @@ pandas
 matplotlib.pyplot 
 keras
 cv2
-os
-pathlib
-imageio
-skimage
