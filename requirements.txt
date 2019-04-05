@@ -10,10 +10,10 @@ aiohttp
 pandas 
 matplotlib
 keras
-opencv-contrib-python
+opencv-contrib-python-headless
 pathlib	
 imageio	
 scikit-image
 tensorflow
 theano
-libglib2.0-0:i386
+
