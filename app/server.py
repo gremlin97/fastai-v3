@@ -9,10 +9,19 @@ from fastai import *
 from fastai.vision import *
 
 # export_file_url = 'https://www.dropbox.com/s/v6cuuvddq73d1e0/export.pkl?raw=1'
-export_file_url = 'https://www.dropbox.com/s/6bgq8t6yextloqp/export.pkl?raw=1'
+export_file_url = 'https://drive.google.com/uc?export=download&id=19P3D8dtv6GnlIbgDOwaFQplgzy2fC79_'
 export_file_name = 'export.pkl'
 
-classes = ['black', 'grizzly', 'teddys']
+classes = ['foreign_particles',
+ 'grain',
+ 'grain_broken',
+ 'grain_covered',
+ 'grain_cut',
+ 'grain_damaged',
+ 'grain_rice',
+ 'grain_sada',
+ 'grain_thin',
+ 'grain_weevilled']
 path = Path(__file__).parent
 
 app = Starlette()
