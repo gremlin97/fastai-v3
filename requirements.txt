@@ -16,3 +16,4 @@ imageio
 scikit-image
 tensorflow
 theano
+libglib2.0-0
