@@ -10,4 +10,5 @@ aiohttp
 pandas 
 matplotlib
 keras
+opencv-python
 cv2
