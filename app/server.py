@@ -27,17 +27,17 @@ async def download_file(url, dest):
             data = await response.read()
             with open(dest, 'wb') as f: f.write(data)
          
- def pca(data):
-            dvect = []
-            for i in range(data.shape[0]):
-                for j in range(data.shape[1]):
-                    if data[i, j]: dvect.append([i, j])
-            dvect = np.array(dvect, dtype=np.float32)
-            dvect = np.array(dvect) - np.mean(dvect, axis=0)
-            dvect /= np.std(dvect, 0)
-            cov = np.dot(dvect.T, dvect) / dvect.shape[0]
-            eigenval, eigenvect = np.linalg.eigh(cov)
-            return cov, eigenvect, eigenval   
+def pca(data):
+    dvect = []
+        for i in range(data.shape[0]):
+            for j in range(data.shape[1]):
+                if data[i, j]: dvect.append([i, j])
+        dvect = np.array(dvect, dtype=np.float32)
+        dvect = np.array(dvect) - np.mean(dvect, axis=0)
+        dvect /= np.std(dvect, 0)
+        cov = np.dot(dvect.T, dvect) / dvect.shape[0]
+        eigenval, eigenvect = np.linalg.eigh(cov)
+        return cov, eigenvect, eigenval   
 
 def get_files(indir):
     indir = indir.rstrip('/')
@@ -73,7 +73,7 @@ async def setup_learner():
                             [-1,-1,-1]])
         im_sharp = cv2.filter2D(im_blur, -1, kernel_sharpening)
         img=im_sharp
-        th3 = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,\cv2.THRESH_BINARY,11,2)
+        th3 = cv2.adaptiveThreshold(img,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY,11,2)
         img=im_sharp
         ret,thresh3 = cv2.threshold(img,127,255,cv2.THRESH_TRUNC)
         kernel = np.ones((3,3),np.uint8)
