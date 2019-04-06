@@ -9,7 +9,7 @@ aiofiles
 aiohttp
 pandas 
 matplotlib
-keras
+Keras
 opencv-contrib-python-headless
 pathlib	
 imageio	
